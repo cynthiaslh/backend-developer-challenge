@@ -39,7 +39,8 @@ func main() {
 func createItem(g *gin.Context) {
 	var newItem Item
 
-	if err := g.BindJSON(&newItem); err != nil {
+	err := g.BindJSON(&newItem)
+	if err != nil {
 		return
 	}
 	newItem.CreatedAt = time.Now().UTC().Format("2006-01-02T15:04:05Z07:00")
@@ -53,7 +54,8 @@ func editItem(g *gin.Context) {
 	var newItem Item
 	id := g.Param("id")
 
-	if err := g.BindJSON(&newItem); err != nil {
+	err := g.BindJSON(&newItem)
+	if err != nil {
 		return
 	}
 

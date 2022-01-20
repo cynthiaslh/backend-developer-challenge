@@ -49,19 +49,6 @@ func createItem(g *gin.Context) {
 	g.IndentedJSON(http.StatusCreated, newItem)
 }
 
-func getItemByID(g *gin.Context) {
-	id := g.Param("id")
-
-	for _, i := range items {
-		if i.ID == id {
-			g.IndentedJSON(http.StatusOK, i)
-			return
-		}
-	}
-	g.IndentedJSON(http.StatusNotFound, gin.H{"message": "item not found"})
-}
-
-
 func editItem(g *gin.Context) {
 	var newItem Item
 	id := g.Param("id")

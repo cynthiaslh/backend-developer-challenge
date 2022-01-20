@@ -3,9 +3,9 @@ For my submission to the Shopify Backend Challenge, I build this simple inventor
 
 This app can perform the basic CRUD operations including:
 * Create inventory items
-* Edit Them
-* Delete Them
-* View a list of them
+* Edit inventory items
+* Delete inventory items
+* View a list of inventory items
 
 For my additional feature, I added the ability to `push a button and export product data to a CSV`.
  
